@@ -1,0 +1,2 @@
+<!doctype html>
+<html data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-preloader="disable" lang="{{ app()->getLocale() }}" @if(app()->isLocale('ar')) dir="rtl" @endif>

@@ -1,0 +1,231 @@
+Models:_
+    Status
+        fields:_
+            name
+    User
+        fields:_
+            name
+            email
+            password
+    Account
+        fields:_
+            name
+            email
+            password
+    Project
+        fields:_
+            title
+            short_description
+            number_of_team_members
+            deadline
+            description
+            goals
+            vision
+            priority
+            type
+            progress_precentage
+            budget
+            status_id
+            account_id
+            parent_id
+    Task
+        fields:_
+            title
+            description
+            priority
+            progress_precentage
+            deadline
+            status_id
+            project_id
+
+Account:_
+    Auth:
+        -Register:_
+            name
+            email
+            password
+        -login
+            email
+            password
+        -Forget Password
+            email
+        -Reset Password
+            password
+            password_confirmation
+
+
+
+
+    ManageProjects:
+        -list_projects
+        -show_project
+        -create_project:_
+            create_project_cart:_
+                title
+                short_description
+                number_of_team_members
+                deadline
+            description
+            goals
+            vision
+            priority
+            type
+            progress_precentage
+            budget
+            status_id
+            account_id
+            parent_id
+
+            -CreateTasks:_
+                title
+                description
+                priority
+                progress_precentage
+                deadline
+                status_id
+                project_id
+
+            -edit_tasks
+            -update_tasks
+            -delete_tasks
+        -edit_project
+        -update_project
+        -delete_project
+
+technical laravel controllers and methods and validation requests:
+
+account.LoginController
+    methods:_
+        -showLoginForm()
+            view:_
+                account.auth.login
+        -login()
+            validationRequest:_
+                account.LoginRequest
+        -logout()
+
+account.auth.RegisterController
+    methods:_
+        -showRegistrationForm()
+            view:_
+                account.auth.register
+        -register()
+            validationRequest:_
+                account.RegisterRequest
+                
+account.auth.ForgotPasswordController
+    methods:_
+        -showForgetPasswordForm()
+            view:_
+                account.auth.forgetPassword
+        -resetPassword()
+            validationRequest:_
+                account.auth.ResetPasswordRequest
+
+AuthentcatedAccountMiddleware:_
+    Account.AccountSettingsController:_
+        methods:_
+            showSettings()
+                view:_
+                    account.settings
+            updateSettings()
+                validationRequest:_
+                    UpdateAccountSettingsRequest
+        ApiResources:_
+            AccountResource
+
+    Account.AccountSecurityController
+        methods:_
+            showSecurity()
+                view:_
+                    account.security
+            updateSecurity()
+                validationRequest:_
+                    UpdateSecurityRequest
+            ApiResources:_
+                AccountResource
+
+    Account.AccountProjectController
+        methods:_
+            -index()
+                view:_
+                    account.project.index
+            -create()
+                view:_
+                    account.project.create
+            -store()
+                validationRequest:_
+                    account.CreateProjecttRequest
+            -createProjectCart()
+                validationRequest:_
+                    account.createProjectCartRequest
+            -show()
+                view:_
+                    account.project.show
+            -edit()
+                view:_
+                    account.project.edit
+            -update()
+                validationRequest:_
+                    account.UpdateProjecttRequest    
+            -delete()
+        ApiResources:_
+            Account/AccountProjectResource
+            Account/ProjectCartResource
+
+    Account.AccountTaskController
+        methods:_
+            -index()
+                view:_
+                    account.task.index
+            -create()
+                view:_
+                    account.task.create
+            -store()
+                validationRequest:_
+                    account.CreateTasktRequest    
+            -show()
+                view:_
+                    account.task.show
+            -edit()
+                view:_
+                    account.task.edit
+            -update()
+                validationRequest:_
+                    account.UpdateTasktRequest    
+            -delete()
+        ApiResources:_
+            Account/AccountAccountTaskResource
+
+    views:_
+        layouts:
+            auth:_
+                auth-layout
+            shared:_
+                app-layout
+                includes:_
+                    alerts
+                    styles
+                    scripts
+                    header
+                    footer
+                    sidebar
+                    status-card
+        account:_
+            auth:_
+                login
+                register
+                forgetPassword
+            home
+            settings
+            security
+            project:_
+                index
+                create
+                show
+                edit
+            task:_
+                index
+                create
+                show
+                edit 
