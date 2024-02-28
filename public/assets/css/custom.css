@@ -6,19 +6,29 @@ Contact: support@themesbrand.com
 File: Custom Css File
 */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Noto+Kufi+Arabic:wght@100..900&display=swap');
-body,#sidebar-span,a {
-    font-family: "Noto Kufi Arabic", sans-serif;
-    font-weight: 400 !important;  
-}
+
 .custom-cart-projects-title {
     height: 50px;
     overflow-y: auto;
 }
+
 .custom-cart-projects-text {
     height: 75px;
     overflow-y: auto;
 }
-.navbar-landing .navbar-nav .nav-item .nav-link,h1,.fw-medium
-,.fw-semibold{
-    font-family: "Noto Kufi Arabic", sans-serif;
+
+body,
+.navbar-landing .navbar-nav .nav-item .nav-link,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+.fw-medium,
+.ff-secondary,
+.fw-semibold {
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+    font-weight: 400 !important;
 }

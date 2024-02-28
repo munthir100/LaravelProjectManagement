@@ -9,7 +9,7 @@
                             <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
                         </span>
                         <span class="logo-lg">
-                            <img src="/assets/images/logo-dark.png" alt="" height="17">
+                            <img src="{{asset('assets/images/logo-dark.png')}}" alt="" height="17">
                         </span>
                     </a>
 
@@ -54,7 +54,7 @@
 
                 <div class="dropdown ms-1 topbar-head-dropdown header-item">
                     <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img id="header-lang-img" src="{{ asset('assets/images/flags/' . (app()->getLocale() == 'ar' ? 'ae' : 'us') . '.svg') }}" alt="{{ __('Header Language') }}" height="20" class="rounded">
+                        <img id="header-lang-img" src="{{ asset('assets/images/flags/' . (app()->getLocale() == 'ar' ? 'sa' : 'us') . '.svg') }}" alt="{{ __('Header Language') }}" height="20" class="rounded">
                     </button>
                     <div class="dropdown-menu dropdown-menu-end">
                         <!-- item - English -->
