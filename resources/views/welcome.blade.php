@@ -15,8 +15,8 @@
         <nav class="navbar navbar-expand-lg navbar-landing fixed-top" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="/assets/images/logo-dark.png" class="card-logo card-logo-dark" alt="logo dark" height="17">
-                    <img src="/assets/images/logo-light.png" class="card-logo card-logo-light" alt="logo light" height="17">
+                    <img src="{{asset('assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
+                    <img src="{{asset('assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
                 </a>
                 <button class="navbar-toggler py-0 fs-20 text-body" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="mdi mdi-menu"></i>
@@ -176,7 +176,7 @@
                 <div class="row align-items-center gy-4">
                     <div class="col-lg-6 col-sm-7 mx-auto">
                         <div>
-                            <img src="/assets/images/landing/features/img-1.png" alt="" class="img-fluid mx-auto">
+                            <img src="{{asset('assets/images/landing/features/img-1.png')}}" alt="" class="img-fluid mx-auto">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -363,7 +363,7 @@
                     <div class="col-lg-4">
                         <div class="process-card mt-4">
                             <div class="process-arrow-img d-none d-lg-block">
-                                <img src="/assets/images/landing/process-arrow-img.png" alt="" class="img-fluid">
+                                <img src="{{asset('assets/images/landing/process-arrow-img.png')}}" alt="" class="img-fluid">
                             </div>
                             <div class="avatar-sm icon-effect mx-auto mb-4">
                                 <div class="avatar-title bg-transparent text-success rounded-circle h1">
@@ -379,7 +379,7 @@
                     <div class="col-lg-4">
                         <div class="process-card mt-4">
                             <div class="process-arrow-img d-none d-lg-block">
-                                <img src="/assets/images/landing/process-arrow-img.png" alt="" class="img-fluid">
+                                <img src="{{asset('assets/images/landing/process-arrow-img.png')}}" alt="" class="img-fluid">
                             </div>
                             <div class="avatar-sm icon-effect mx-auto mb-4">
                                 <div class="avatar-title bg-transparent text-success rounded-circle h1">
@@ -501,7 +501,7 @@
                     <div class="col-lg-4 mt-4">
                         <div>
                             <div>
-                                <img src="/assets/images/logo-light.png" alt="{{ __('logo light') }}" height="17">
+                                <img src="{{asset('assets/images/logo-light.png')}}" alt="{{ __('logo light') }}" height="17">
                             </div>
                             <div class="mt-4 fs-13">
                                 <p>{{ __('Premium Multipurpose Admin & Dashboard Template') }}</p>
