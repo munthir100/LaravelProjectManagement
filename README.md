@@ -19,6 +19,14 @@ This platform supports multiple languages, catering to a diverse user base. Curr
 
 ### Getting Started
 
+## Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- [Git](https://git-scm.com/)
+- [Composer](https://getcomposer.org/)
+- [PHP](https://www.php.net/) (Version 8.1 or higher)
+
 Follow these steps to set up the project locally:
 
 1. **Clone the repository:**
