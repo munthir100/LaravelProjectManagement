@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to our Project Management Platform, a robust and user-friendly system designed to streamline project and task management. This platform is built using the Laravel framework, adhering to MVC architecture principles.
+Welcome to our Project Management Platform, a robust and user-friendly system designed to streamline project and task management. This platform is built using the Laravel framework, in a backend and html , css , javascript , bootstrapp5 in a front end adhering to MVC architecture principles.
 
 ## Business Details
 
@@ -23,8 +23,8 @@ Follow these steps to set up the project locally:
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/project-management.git
-    cd project-management
+    git clone https://github.com/munthir100/LaravelProjectManagement.git
+    cd LaravelProjectManagement
     ```
 
 2. **Install Dependencies:**
