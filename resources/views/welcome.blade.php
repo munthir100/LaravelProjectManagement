@@ -587,12 +587,37 @@
                                 </li>
                             </ul>
                         </div>
+                        <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="header-lang-img" src="{{ asset('assets/images/flags/' . (app()->getLocale() == 'ar' ? 'sa' : 'us') . '.svg') }}" alt="{{ __('Header Language') }}" height="20" class="rounded">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <!-- item - English -->
+                            @if(app()->getLocale() == 'ar')
+                            <a href="#" onclick="document.getElementById('enForm').submit()" class="dropdown-item notify-item language py-2" data-lang="en" title="{{ __('English') }}">
+                                <img src="{{ asset('assets/images/flags/us.svg') }}" alt="user-image" class="me-2 rounded" height="18">
+                                <span class="align-middle">{{ __('English') }}</span>
+                            </a>
+                            @else
+                            <!-- item - Arabic -->
+                            <a href="#" onclick="document.getElementById('arForm').submit()" class="dropdown-item notify-item language" data-lang="ar" title="{{ __('Arabic') }}">
+                                <img src="{{ asset('assets/images/flags/sa.svg') }}" alt="user-image" class="me-2 rounded" height="18">
+                                <span class="align-middle">{{ __('Arabic') }}</span>
+                            </a>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>
         </footer>
 
-
+        <form type="hidden" class="d-none" action="{{ route('changeLocale') }}" method="post" id="arForm">
+            @csrf
+            <input type="text" name="lang" value="ar" required />
+        </form>
+        <form type="hidden" class="d-none" action="{{ route('changeLocale') }}" method="post" id="enForm">
+            @csrf
+            <input type="text" name="lang" value="en" required />
+        </form>
         <!-- end footer -->
 
 

@@ -90,8 +90,8 @@
                 </div>
 
                 <div class="ms-1 header-item d-none d-sm-flex">
-                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
-                        <i class='bx bx-moon fs-22'></i>
+                    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle theme-selected-mode">
+                        <i class='bx bx-moon theme-mode fs-22'></i>
                     </button>
                 </div>
 

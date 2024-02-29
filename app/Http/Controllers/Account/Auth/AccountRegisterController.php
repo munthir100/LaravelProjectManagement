@@ -27,6 +27,6 @@ class AccountRegisterController extends Controller
         // Log in the user
         Auth::guard('account')->login($account);
 
-        return to_route('account.home')->with('success', 'Registration successful. Welcome!');
+        return to_route('account.home')->with('success', __('Registration successful'));
     }
 }
