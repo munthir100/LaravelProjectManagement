@@ -28,7 +28,7 @@
             <p class="card-text"><strong>{{ __('Type') }}:</strong> {{ $project->type }}</p>
             <p class="card-text"><strong>{{ __('Progress Percentage') }}:</strong> {{ $project->progress_percentage }}%</p>
             <p class="card-text"><strong>{{ __('Budget') }}:</strong> ${{ $project->budget }}</p>
-            <p class="card-text"><strong>{{ __('Status') }}:</strong> {{ $project->status->name }}</p>
+            <p class="card-text"><strong>{{ __('Status') }}:</strong> {{ __($project->status->name) }}</p>
             <p class="card-text"><strong>{{ __('Parent Project') }}:</strong> {{ $project->parentProject ? $project->parentProject->title : __('None') }}</p>
 
             <!-- You can add more details based on your project model attributes -->

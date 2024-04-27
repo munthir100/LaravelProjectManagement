@@ -77,7 +77,7 @@
 
 
                 <div class="ms-1 header-item d-sm-flex">
-                    <a data-bs-toggle="modal" data-bs-target="#createProject" class="btn btn-primary btn-label rounded-pill">
+                    <a href="{{route('account.projects.create')}}" class="btn btn-primary btn-label rounded-pill">
                         <i class="ri-add-line label-icon align-middle rounded-pill fs-16 me-2"></i>
                         {{ __('Project') }}
                     </a>

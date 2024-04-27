@@ -1,7 +1,7 @@
 @extends('layouts.shared.app-layout')
 
 @section('title')
-@include("layouts.shared.includes.title-meta", ["title" => "Create Project"])
+@include("layouts.shared.includes.title-meta", ["title" => __('Create Project')])
 @endsection
 
 @section('styles')
@@ -9,7 +9,7 @@
 @endsection
 
 @section('page-title')
-@include("layouts.shared.includes.page-title", ["pagetitle" => "Account", "title" => "Projects > Create"])
+@include("layouts.shared.includes.page-title", ["pagetitle" => __("Account"), "title" => __('Create Project')])
 @endsection
 
 @section('content')

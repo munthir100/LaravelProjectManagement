@@ -34,7 +34,9 @@
                             </div>
                         </div>
                         <div class="custom-cart-projects-title">
-                            <h5 class="fs-15 fw-semibold">{{ $project->title }}</h5>
+                            <h5 class="fs-15 fw-semibold">
+                            <a href="{{route('account.projects.show',$project->id)}}"></a>
+                            </h5>
                         </div>
                         <div class="custom-cart-projects-text">
                             <p class="text-muted">{{ $project->short_description }}</p>
